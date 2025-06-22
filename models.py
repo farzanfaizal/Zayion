@@ -1,3 +1,8 @@
+from dotenv import load_dotenv
+import os
+
+# Load environment variables from .env file
+load_dotenv()
 from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean, Text, ForeignKey, JSON, Index, create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker, Session

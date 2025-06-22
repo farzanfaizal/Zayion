@@ -1,14 +1,14 @@
 {
-  "name": "workspace",
+  "name": "zayion-connect",
   "version": "1.0.0",
-  "main": "vite.config.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "backend": "python main.py",
+    "start": "concurrently \"npm run backend\" \"npm run dev\""
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "dependencies": {
     "@vitejs/plugin-react": "^4.5.2",
     "date-fns": "^4.1.0",
@@ -17,5 +17,8 @@
     "react-dom": "^19.1.0",
     "react-leaflet": "^5.0.0",
     "vite": "^6.3.5"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
   }
 }
